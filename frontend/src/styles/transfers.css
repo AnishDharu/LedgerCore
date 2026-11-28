@@ -1,0 +1,20 @@
+/* ---- Shared table helpers ---- */
+.table-scroll { overflow-x: auto; }
+.nowrap { white-space: nowrap; }
+a.plain { color: var(--ink); text-decoration: none; }
+a.plain:hover { text-decoration: underline; text-underline-offset: 3px; }
+.ledger .row-link { cursor: pointer; }
+.ledger .row-link:hover td { background: var(--surface); }
+.filter-one { max-width: 320px; }
+
+/* ---- Transfer form ---- */
+.transfer-form { max-width: 480px; }
+
+/* ---- Receipt: a ruled slip ---- */
+.receipt { background: var(--surface); border: 1px solid var(--rule-strong); border-top-width: 4px; padding: var(--space-5); max-width: 560px; }
+.receipt-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding-bottom: var(--space-4); margin-bottom: var(--space-4); border-bottom: 3px double var(--rule-strong); }
+.receipt-amount { font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 500; }
+.receipt dl { display: grid; grid-template-columns: 110px 1fr; gap: var(--space-3) var(--space-4); margin: 0; }
+.receipt dt { color: var(--ink-2); font-size: var(--step--1); padding-top: 2px; }
+.receipt dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 480px) { .receipt dl { grid-template-columns: 1fr; gap: 0; } .receipt dd { margin-bottom: var(--space-3); } }

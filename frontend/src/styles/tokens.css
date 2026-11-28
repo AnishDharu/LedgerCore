@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --paper: #eef1ee;
+  --surface: #fafbf9;
+  --ink: #14202b;
+  --ink-2: #4a5864;
+  --ink-3: #6f7c86;
+  --rule: #cbd3cc;
+  --rule-strong: #14202b;
+  --cobalt: #2447c9;
+  --cobalt-ink: #ffffff;
+  --cobalt-wash: #e3e9fa;
+  --credit: #17744a;
+  --credit-wash: #dff1e7;
+  --debit: #b3341f;
+  --debit-wash: #f8e4df;
+  --frozen: #8f5c06;
+  --frozen-wash: #f6ead0;
+
+  --font-ui: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-num: 'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+  --step-3: 2.25rem;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --radius: 3px;
+  --focus: 0 0 0 3px rgba(36, 71, 201, 0.35);
+}
+
+:root[data-theme='dark'] {
+  --paper: #0f161c;
+  --surface: #161f27;
+  --ink: #e6ebe7;
+  --ink-2: #aab6bd;
+  --ink-3: #82909a;
+  --rule: #2b3843;
+  --rule-strong: #e6ebe7;
+  --cobalt: #7b97ff;
+  --cobalt-ink: #0f161c;
+  --cobalt-wash: #1d2a52;
+  --credit: #5fd29a;
+  --credit-wash: #14301f;
+  --debit: #ff8f7b;
+  --debit-wash: #3a1b15;
+  --frozen: #e8b45a;
+  --frozen-wash: #3a2c0e;
+  --focus: 0 0 0 3px rgba(123, 151, 255, 0.45);
+}

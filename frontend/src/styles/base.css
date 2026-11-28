@@ -1,0 +1,67 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: var(--step-0);
+  line-height: 1.5;
+}
+h1, h2, h3 { line-height: 1.2; margin: 0; font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-size: var(--step-2); }
+h2 { font-size: var(--step-1); }
+p { margin: 0; }
+a { color: var(--cobalt); text-underline-offset: 3px; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: none; box-shadow: var(--focus); border-radius: var(--radius); }
+.num { font-family: var(--font-num); font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.muted { color: var(--ink-2); }
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-height: 40px; padding: 0 var(--space-4);
+  border: 1px solid var(--rule-strong); border-radius: var(--radius);
+  background: var(--surface); font-weight: 600; cursor: pointer; text-decoration: none; color: var(--ink);
+}
+.btn:hover:not(:disabled) { background: var(--paper); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn-primary { background: var(--cobalt); border-color: var(--cobalt); color: var(--cobalt-ink); }
+.btn-primary:hover:not(:disabled) { background: var(--cobalt); filter: brightness(1.1); }
+.btn-danger { color: var(--debit); border-color: var(--debit); }
+.btn-quiet { border-color: transparent; background: transparent; }
+
+/* ---- Form fields ---- */
+.field { display: grid; gap: var(--space-1); margin-bottom: var(--space-4); }
+.field label { font-weight: 600; font-size: var(--step--1); }
+.field input, .field select, .field textarea {
+  min-height: 42px; padding: 0 var(--space-3);
+  background: var(--surface); border: 1px solid var(--rule-strong); border-radius: var(--radius);
+}
+.field textarea { padding: var(--space-3); min-height: 84px; }
+.field .hint { color: var(--ink-3); font-size: var(--step--1); }
+.field .error-text { color: var(--debit); font-size: var(--step--1); }
+
+.alert { padding: var(--space-3) var(--space-4); border-left: 4px solid var(--debit); background: var(--debit-wash); margin-bottom: var(--space-4); }
+.alert.ok { border-color: var(--credit); background: var(--credit-wash); }
+
+/* ---- Status pill ---- */
+.pill { display: inline-block; padding: 1px var(--space-2); border: 1px solid currentColor; border-radius: 999px; font-size: var(--step--1); font-weight: 600; }
+.pill.active, .pill.completed { color: var(--credit); background: var(--credit-wash); }
+.pill.frozen, .pill.pending { color: var(--frozen); background: var(--frozen-wash); }
+.pill.closed, .pill.failed { color: var(--ink-2); background: var(--paper); }
+
+/* ---- Ledger rules: the structural motif ---- */
+.ledger { width: 100%; border-collapse: collapse; }
+.ledger caption { text-align: left; padding-bottom: var(--space-2); }
+.ledger th { text-align: left; font-size: var(--step--1); font-weight: 600; color: var(--ink-2); padding: var(--space-2) var(--space-3); border-bottom: 2px solid var(--rule-strong); }
+.ledger td { padding: var(--space-3); border-bottom: 1px solid var(--rule); vertical-align: top; }
+.ledger .r { text-align: right; }
+.ledger .debit { color: var(--debit); }
+.ledger .credit { color: var(--credit); }
+
+.skeleton { background: linear-gradient(90deg, var(--rule), var(--paper), var(--rule)); background-size: 200% 100%; animation: shimmer 1.4s linear infinite; border-radius: var(--radius); min-height: 1em; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+@media (prefers-reduced-motion: reduce) { .skeleton { animation: none; } * { scroll-behavior: auto !important; } }

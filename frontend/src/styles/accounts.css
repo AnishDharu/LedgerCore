@@ -1,0 +1,32 @@
+/* ---- Accounts list: an accounting table, with a ruled total line ---- */
+.accounts .row-link { cursor: pointer; }
+.accounts .row-link:hover td { background: var(--surface); }
+.accounts .acct-no { color: var(--ink); font-weight: 500; }
+.accounts td { vertical-align: middle; padding-block: var(--space-4); }
+.accounts tfoot th { text-align: left; font-size: var(--step-0); color: var(--ink); border-top: 2px solid var(--rule-strong); border-bottom: 3px double var(--rule-strong); padding: var(--space-3); }
+.accounts tfoot td { font-weight: 600; font-size: var(--step-1); border-top: 2px solid var(--rule-strong); border-bottom: 3px double var(--rule-strong); padding: var(--space-3); }
+
+/* ---- Account detail ---- */
+.back { margin-bottom: var(--space-4); }
+.acct-head { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-4); padding-bottom: var(--space-4); border-bottom: 2px solid var(--rule-strong); margin-bottom: var(--space-5); }
+.acct-title { font-size: var(--step-2); font-weight: 600; margin-bottom: var(--space-1); }
+.linkish { min-height: 0; padding: 0 var(--space-1); color: var(--cobalt); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+.balance { padding: var(--space-5) 0 var(--space-6); border-bottom: 1px solid var(--rule); margin-bottom: var(--space-5); }
+.balance-figure { display: block; font-size: clamp(2rem, 6vw, 3.25rem); font-weight: 500; line-height: 1.15; margin-top: var(--space-1); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.alert.warn { border-color: var(--frozen); background: var(--frozen-wash); }
+.small { font-size: var(--step--1); }
+
+/* ---- Dialog ---- */
+.dialog { border: 1px solid var(--rule-strong); border-radius: var(--radius); padding: 0; background: var(--surface); color: var(--ink); width: min(440px, calc(100vw - 32px)); }
+.dialog::backdrop { background: rgba(10, 16, 21, 0.55); }
+.dialog-body { padding: var(--space-5); }
+.dialog-body h2 { margin-bottom: var(--space-4); overflow-wrap: anywhere; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: var(--space-3); margin-top: var(--space-5); }
+.choice { border: 0; padding: 0; margin: 0 0 var(--space-4); display: grid; gap: var(--space-2); }
+.choice legend { font-weight: 600; font-size: var(--step--1); margin-bottom: var(--space-2); padding: 0; }
+.choice label { display: flex; gap: var(--space-3); align-items: flex-start; padding: var(--space-3); border: 1px solid var(--rule); border-radius: var(--radius); cursor: pointer; }
+.choice label.on { border-color: var(--cobalt); background: var(--cobalt-wash); }
+.choice label:has(:focus-visible) { box-shadow: var(--focus); }
+.choice small { display: block; color: var(--ink-2); }
+.choice input { margin-top: 4px; accent-color: var(--cobalt); }

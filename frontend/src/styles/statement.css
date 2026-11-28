@@ -1,0 +1,8 @@
+.stmt-sub { margin: calc(-1 * var(--space-2)) 0 var(--space-4); }
+.filters { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: flex-end; margin-bottom: var(--space-4); }
+.filters .field { margin-bottom: 0; }
+.filters-clear { align-self: flex-end; color: var(--cobalt); }
+.statement .debit, .statement .credit { font-weight: 500; }
+.statement tbody tr:hover td { background: var(--surface); }
+.statement tfoot th { text-align: left; border-top: 2px solid var(--rule-strong); border-bottom: 3px double var(--rule-strong); padding: var(--space-3); color: var(--ink); font-size: var(--step-0); }
+.statement tfoot td { border-top: 2px solid var(--rule-strong); border-bottom: 3px double var(--rule-strong); font-weight: 600; }
